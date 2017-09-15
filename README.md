@@ -20,8 +20,8 @@ paper1:
    - Rawat, Neha
    hid:
    - 224
-   title: This is my paper about xyz
-   abstract: This paper showcases tis and that and the other
+   title: Big Data Applications in the Hospitality Sector
+   abstract: This paper will focus on how big data is used in the hotel industry for better customer satisfaction, marketing    effectiveness and yield management using customer data for segmentation and predictive analyses.
    url: https://github.com/bigdata-i523/hid224/paper1/paper1.pdf
    type: latex
 ```
