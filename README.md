@@ -8,7 +8,7 @@
 ```
 owner:
     hid: 224
-    name: Neha Rawat
+    name: Rawat, Neha
     url: https://github.com/bigdata-i523/hid224
 ```
 
@@ -17,7 +17,7 @@ owner:
 ```
 paper1:
    author: 
-   - Neha Rawat
+   - Rawat, Neha
    hid:
    - 224
    title: This is my paper about xyz
@@ -31,7 +31,7 @@ paper1:
 ```
 paper2:
    author: 
-   - Neha Rawat
+   - Rawat, Neha
    hid:
    - 224
    title: This is my paper about the other abc
@@ -50,7 +50,7 @@ paper2:
    type: project
    type: report
    author: 
-   - Neha Rawat
+   - Rawat, Neha
    hid:
    - 224
    title: Benchmarking a BigData Docker deployment
