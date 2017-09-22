@@ -32,10 +32,10 @@ paper2:
    - Rawat, Neha
    hid:
    - 224
-   title: This is my paper about the other abc
-   abstract: This paper showcases tis and that and the other in regards to abc
+   title: 
+   abstract: 
    url: https://github.com/bigdata-i523/hid224/paper2/paper2.pdf   
-   type: word
+   type: latex
    status : not started
 ```
 
@@ -49,8 +49,8 @@ paper2:
    - Rawat, Neha
    hid:
    - 224
-   title: Benchmarking a BigData Docker deployment
-   abstract: This paper showcases tis and that and the other 
+   title: 
+   abstract:  
    url: https://github.com/bigdata-i523/hid224/project/report.pdf
    type: latex
    status : not started
