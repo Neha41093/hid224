@@ -11,6 +11,6 @@
 * 09/14/17 Enabled Python 2 and 3 via pyenv on VirtualBox on Windows
 
 # Writing
-
-* 09/19/17 Prepared notes on the report topic
+ 
+* 09/19/17 Prepared notes and collected papers/articles on the report topic
 * 09/15/17 Uploaded necessary .tex template files on GitHub
