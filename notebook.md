@@ -1,6 +1,6 @@
 # Logistic
 
-* 09/13/17 Read the class organization section 
+* 09/13/17 Read the entire class overview section 
 
 # Theory
 
