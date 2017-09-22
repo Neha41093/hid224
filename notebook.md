@@ -12,5 +12,6 @@
 
 # Writing
  
-* 09/19/17 Prepared notes and collected papers/articles on the report topic
-* 09/15/17 Uploaded necessary .tex template files on GitHub
+* 09/15/17 - 09/21/17 Uploaded necessary .tex template files on GitHub 
+* 09/14/17 - 09/20/17 Prepared notes and collected papers/articles on the report topic
+
