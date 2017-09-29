@@ -2,6 +2,10 @@
 
 * 08/28/17 Read the entire class overview section 
 
+# Meetings
+
+* 08/25/17 - 09/29/17 Attended class meetings for residential students
+
 # Theory
 
 * 09/11/17 - 09/21/17 Read and watched all videos in the Theory Introduction (3.1 and 3.2) section
