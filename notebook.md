@@ -13,6 +13,7 @@
 # Practice
 
 * 09/11/17 Enabled Python 2 and 3 via pyenv on VirtualBox on Windows
+* 09/29/17 - 10/05/17 Researched, implemented and completed documentation of MQTT on Ubuntu, Windows, MAC OSX and Raspberry Pi(no implementation)
 
 # Writing
  
