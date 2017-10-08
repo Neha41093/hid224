@@ -28,7 +28,7 @@ paper1:
       this is mind, hotels today, whether they are big chains or small independent establishments, are using 
       data generated internally and on the web to develop strategies for better customer satisfaction, marketing 
       effectiveness, yield management and operational efficiency. 
-   url: https://github.com/bigdata-i523/hid224/paper1/report.tex
+   url: https://github.com/bigdata-i523/hid224/blob/master/paper1/report.tex
    type: latex
    status: in progress
    chapter: Business
