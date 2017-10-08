@@ -16,7 +16,7 @@ owner:
 ```
 paper1:
    author: 
-   - Neha Rawat
+   - Rawat, Neha
    hid:
    - 224
    title: Big Data Applications in the Hospitality Sector
