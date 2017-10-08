@@ -19,11 +19,8 @@ paper1:
    - 224
    title: Big Data Applications in the Hospitality Sector
    abstract: >
-      This paper will focus on how big data is used in the hotel
-      industry for better customer satisfaction, marketing effectiveness
-      and yield management using customer data for segmentation and
-      predictive analyses.
-   url: https://github.com/bigdata-i523/hid224/paper1/paper1.pdf
+       The rise of Big Data in the field of Hospitality though recent, is by no means temporary. The hotel industry is one which deals with millions of customers on a day-to-day basis and generates a plethora of customer data through such interactions. It is also the sector which depends the most on customer loyalty, and thus profits greatly through the analytical insights that Big Data has to offer. Keeping this is mind, hotels today, whether they are big chains or independent establishments, are using data generated internally and on the web to develop strategies for better customer satisfaction, marketing effectiveness, yield management and operational efficiency. 
+   url: https://github.com/bigdata-i523/hid224/paper1/report.pdf
    type: latex
    status : in progress
    chapter: Business
