@@ -14,6 +14,7 @@ review:
 	pdflatex ${FLAGS} ${REVIEW}
 	pdflatex ${FLAGS} ${REVIEW}
 	open ${REVIEW}.pdf
+	bibtex ${REVIEW} | sed -e 's/^/\* [ ] /'
 
 pack:
 	rm -rf ${FILE}
