@@ -30,7 +30,7 @@ paper1:
       effectiveness, yield management and operational efficiency. 
    url: https://github.com/bigdata-i523/hid224/blob/master/paper1/report.tex
    type: latex
-   status: in progress
+   status: 100%
    chapter: Business
 ```
    
