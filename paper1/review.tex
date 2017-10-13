@@ -1,16 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\usepackage{hyperref}
-\usepackage{todonotes}
-
-\usepackage{endfloat}
-\renewcommand{\efloatseparator}{\mbox{}} % no new page between figures
-
-\usepackage{booktabs} % For formal tables
-
-\settopmatter{printacmref=false} % Removes citation information below abstract
-\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
-\pagestyle{plain} % removes running headers
+\input{format/i523}
 
 \begin{document}
 \title{Big Data Applications in the Hospitality Sector}
@@ -37,9 +27,6 @@
 \keywords{i523, HID224, Marketing, Yield Management, Recommendation Systems, Data Warehousing, Data Mining}
 
 \maketitle
-
-\todo[inline]{9 issues with refernces, see issues in github}
-\todo[inline]{does not use latex quotes}
 
 \section{Introduction}
 
@@ -105,4 +92,4 @@ Big Data has revolutionized the field of Travel and Hospitality, and continues t
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
 
-\end{document}
+\input{bibtex-error}\input{issues}\end{document}
