@@ -21,3 +21,4 @@
 * 09/12/17 - 09/20/17 Prepared notes and collected papers/articles on the report topic
 * 09/22/17 Installed and learned Jabref
 * 09/25/17 Updated report.tex and report.bib files for paper1
+* 10/02/17 - 10/08/17 Updated and completed report files for paper 1
