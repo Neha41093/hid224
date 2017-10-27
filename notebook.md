@@ -5,6 +5,7 @@
 # Meetings
 
 * 08/25/17 - 09/29/17 Attended class meetings for residential students
+* 10/13/17 - 10/20/17 Attended class meetings for residential students
 
 # Theory
 
@@ -23,3 +24,5 @@
 * 09/25/17 Updated report.tex and report.bib files for paper1
 * 10/02/17 - 10/08/17 Updated and completed report files for paper 1
 * 10/16/17 Started research on paper 2 topic and updates for paper 1
+* 10/18/17 - 10/20/17 Made updates and added review-local to paper1 folder
+* 10/20/17 Submitted paper1 to Turnitin
