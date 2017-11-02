@@ -1,0 +1,79 @@
+---
+owner:
+    hid: 224
+    name: Rawat, Neha
+    url: https://github.com/bigdata-i523/hid224
+paper1:
+    abstract: >
+         The rise of Big Data in the field of Hospitality
+         though recent, is by no means temporary. The hotel
+         industry is one which deals with millions of customers
+         on a day-to-day basis and generates a plethora  of customer
+         data through such interactions. It is also the sector which
+         depends the most on customer  loyalty, and thus profits greatly
+         through the analytical insights that Big Data has to offer.
+         Keeping  this is mind, hotels today, whether they are big chains
+         or small independent establishments, are using data generated
+         internally and on the web to develop strategies for better
+         customer satisfaction, marketing  effectiveness, yield management
+         and operational efficiency.
+    author:
+        - Rawat, Neha
+    chapter: Business
+    hid:
+        - 224
+    status: Nov 3 17 100%
+    title: Big Data Applications in the Hospitality Sector
+    type: latex
+    url: https://github.com/bigdata-i523/hid224/blob/master/paper1/report.tex
+paper2:
+    abstract: >
+              Efficient management and utilization of energy and other
+              utilities is the need of the hour. The plethora of real-time
+              data generated during day-to-day operational activities can
+              be used to detect consumption patterns and predict outages,
+              shortages and surges in power usage, while simultaneously
+              improving the use of renewable resources as sustainable
+              alternatives. Intelligent big data analytics can help the
+              energy and utilites sector by reducing costs through devising
+              efficient operational strategies, becoming more
+              self-sufficient and productive in their performance and
+              improving customer satisfaction and interaction by making
+              valuable suggestions to the consumers on how to use their
+              resources better.
+    author:
+        - Rawat, Neha
+    hid:
+        - 224
+    status: In progress
+    title: Big Data Applications in the Energy and Utilities Sector
+    type: latex
+    url: https://github.com/bigdata-i523/hid224/blob/master/paper2/report.tex
+project:
+    abstract: >
+              With the increase in internet traffic, threats on the network
+              have also increased. Denial-of-service attacks are cyber
+              attacks wherein a perpetrator, due to any kind of malicious
+              intent, tries to make a resource on the network unavailable
+              to its intended users and carries it out by swamping the
+              system or resource with excess requests in order to overload
+              it and prevent users from accessing it. A much more dangerous
+              variety of such an attack is if it is distributed i.e. coming
+              from various sources. Big Data analytics, however, can be
+              used to detect such attacks by having the ability to store
+              the voluminous logs of such attacks and using the data and
+              machine learning techniques to design an anomaly detection
+              system to detect and prevent these attacks. This project will
+              aim to design such a model and display its effects on
+              a DDoS logs dataset such as CAIDA or the USC/ISI ANT dataset
+              (~1-2 GB in size).
+    author:
+        - Rawat, Neha
+    hid:
+        - 224
+    status: In progress
+    title: >
+           Big Data Analytics in Detection of
+           DDoS (Distributed Denial-of-Service) attacks
+    type: project
+    url: https://github.com/bigdata-i523/hid224/blob/master/project/report.tex
