@@ -6,15 +6,18 @@
 
 * 08/25/17 - 09/29/17 Attended class meetings for residential students
 * 10/13/17 - 10/20/17 Attended class meetings for residential students
+* 10/27/17 Attended class meeting for residential students
 
 # Theory
 
 * 09/11/17 - 09/21/17 Read and watched all videos in the Theory Introduction (3.1 and 3.2) section
+* 11/01/17 - 11/03/17 Read and watched videos for section 3.3 (Big Data Use Cases Survey)
 
 # Practice
 
 * 09/11/17 Enabled Python 2 and 3 via pyenv on VirtualBox on Windows
 * 09/29/17 - 10/05/17 Researched, implemented and completed documentation of MQTT on Ubuntu, Windows, MAC OSX and Raspberry Pi(no implementation)
+* 11/01/17 Completed YAML Quiz on Piazza
 
 # Writing
  
@@ -26,3 +29,4 @@
 * 10/16/17 Started research on paper 2 topic and updates for paper 1
 * 10/18/17 - 10/20/17 Made updates and added review-local to paper1 folder
 * 10/20/17 Submitted paper1 to Turnitin
+* 11/01/17 Updated README file on Github
