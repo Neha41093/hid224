@@ -27,6 +27,7 @@ paper1:
     type: latex
     url: https://github.com/bigdata-i523/hid224/blob/master/paper1/report.tex
 paper2:
+    review: Nov 6 2017
     abstract: >
               Efficient management and utilization of energy and other
               utilities is the need of the hour. The plethora of real-time
