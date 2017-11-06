@@ -36,7 +36,7 @@ paper2:
               shortages and surges in power usage, while simultaneously
               improving the use of renewable resources as sustainable
               alternatives. Intelligent big data analytics can help the
-              energy and utilites sector by reducing costs through devising
+              energy and utilities sector by reducing costs through devising
               efficient operational strategies, becoming more
               self-sufficient and productive in their performance and
               improving customer satisfaction and interaction by making
@@ -44,6 +44,7 @@ paper2:
               resources better.
     author:
         - Rawat, Neha
+    chapter: Energy
     hid:
         - 224
     status: In progress
