@@ -30,4 +30,4 @@
 * 10/18/17 - 10/20/17 Made updates and added review-local to paper1 folder
 * 10/20/17 Submitted paper1 to Turnitin
 * 11/01/17 Updated README file on Github
-* 11/03/17 - 11/06/17 Completed and uploaded final version of paper2 on Github and submitted to Turnitin
+* 11/02/17 - 11/06/17 Completed and uploaded final version of paper2 on Github and submitted to Turnitin
