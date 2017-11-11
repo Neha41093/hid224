@@ -67,8 +67,7 @@ project:
               machine learning techniques to design an anomaly detection
               system to detect and prevent these attacks. This project will
               aim to design such a model and display its effects on
-              a DDoS logs dataset such as CAIDA or the USC/ISI ANT dataset
-              (~1-2 GB in size).
+              a DDoS logs dataset (~1-2 GB in size).
     author:
         - Rawat, Neha
     hid:
