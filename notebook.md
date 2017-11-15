@@ -7,11 +7,13 @@
 * 08/25/17 - 09/29/17 Attended class meetings for residential students
 * 10/13/17 - 10/20/17 Attended class meetings for residential students
 * 10/27/17 Attended class meeting for residential students
+* 11/03/17 - 11/10/17 Attended class meetings for residential students
 
 # Theory
 
 * 09/11/17 - 09/21/17 Read and watched all videos in the Theory Introduction (3.1 and 3.2) section
 * 11/01/17 - 11/03/17 Read and watched videos for section 3.3 (Big Data Use Cases Survey)
+* 11/07/17 - 11/10/17 Read and watched videos for section 3.4 (Health Informatics Case Study)
 
 # Practice
 
