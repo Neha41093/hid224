@@ -21,6 +21,8 @@
 * 09/11/17 Enabled Python 2 and 3 via pyenv on VirtualBox on Windows
 * 09/29/17 - 10/05/17 Researched, implemented and completed documentation of MQTT on Ubuntu, Windows, MAC OSX and Raspberry Pi(no implementation)
 * 11/01/17 Completed YAML Quiz on Piazza
+* 11/15/17 Completed Seaborn Visualization task using Jupyter Notebook
+* 11/17/17 - 11/18/17 Working on Secchi disk classification problem using Jupyter Notebook
 
 # Writing
  
