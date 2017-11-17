@@ -8,6 +8,7 @@
 * 10/13/17 - 10/20/17 Attended class meetings for residential students
 * 10/27/17 Attended class meeting for residential students
 * 11/03/17 - 11/10/17 Attended class meetings for residential students
+* 11/17/17 Attended class meeting for residential students
 
 # Theory
 
