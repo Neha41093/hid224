@@ -23,6 +23,10 @@
 * 11/01/17 Completed YAML Quiz on Piazza
 * 11/15/17 Completed Seaborn Visualization task using Jupyter Notebook
 * 11/17/17 - 11/18/17 Working on Secchi disk classification problem using Jupyter Notebook
+* 11/19/17 Added Linear Perceptron data analysis task to Github
+* 11/19/17 Added Cross Validation data analysis task to Github
+* 11/19/17 Added Precision and Recall data analysis task to Github
+* 11/19/17 Completed and added Secchi disk classification problem (using K-means) to Github
 
 # Writing
  
