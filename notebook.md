@@ -15,6 +15,8 @@
 * 09/11/17 - 09/21/17 Read and watched all videos in the Theory Introduction (3.1 and 3.2) section
 * 11/01/17 - 11/03/17 Read and watched videos for section 3.3 (Big Data Use Cases Survey)
 * 11/07/17 - 11/10/17 Read and watched videos for section 3.4 (Health Informatics Case Study)
+* 11/18/17 - 11/19/17 Read and watched videos for section 3.5 (e-Commerce and Lifestyle Case Study)
+* 11/19/17 Read and watched videos for section 3.6 (Physics Case Study)
 
 # Practice
 
