@@ -65,9 +65,10 @@ project:
               used to detect such attacks by having the ability to store
               the voluminous logs of such attacks and using the data and
               machine learning techniques to design an anomaly detection
-              system to detect and prevent these attacks. This project will
-              aim to design such a model and display its effects using
-              a DDoS logs dataset.
+              system (using a classification model) to detect and prevent
+              these attacks. This project wil aim to explore such
+              classification models, design and train the most optimum
+              model and display its effects using a DDoS logs dataset.
     author:
         - Rawat, Neha
     hid:
