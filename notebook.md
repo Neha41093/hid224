@@ -30,6 +30,7 @@
 * 11/19/17 Added Cross Validation data analysis task to Github
 * 11/19/17 Added Precision and Recall data analysis task to Github
 * 11/19/17 Completed and added Secchi disk classification problem (using K-means) to Github
+* 12/04/17 Completed and added project report and code on Github
 
 # Writing
  
