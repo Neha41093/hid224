@@ -106,11 +106,11 @@ Figure \ref{F:pair} shows the pair plot between the first 15 variables in the tr
 We proceed with separating the binary variables (mentioned in the documentation) from the continuous variables and scaling the continuous variables using mean normalization in the training dataset. We then apply the same transformations to the test dataset. Post this, we consolidate all our features and get the final processed datasets for training and testing.
 
 \subsection{Data Analysis}
-Once we are ready with our final datasets, we design the required detection models by training them on the training data and testing their performance on the test data. For the design of the models, we use the {\em scikit-learn or sklearn} package in python, which contains a plethora of resources for statistical and machine learning methodologies. For performance tests, we calculate the accuracy, precision, recall and F1 score for the model (for both 2-label and multi-label classification). The confusion matrix generated in each case displays the classes as follows: 2-class classification (0 - bad, 1 - normal) ; Multi-class classification (0 - DoS/DDoS, 1 - R2L, 2 - U2R, 3 - normal, 4 - probe).
+Once we are ready with our final datasets, we design the required detection models by training them on the training data and testing their performance on the test data. For the design of the models, we use the {\em scikit-learn or sklearn} package in python, which contains a plethora of resources for statistical and machine learning methodologies. For most models, we also employ the {\em $n_jobs$} parameter present in the models for parallelization purposes \cite{scikit12}. For performance tests, we calculate the accuracy, precision, recall and F1 score for the model (for both 2-label and multi-label classification). The confusion matrix generated in each case displays the classes as follows: 2-class classification (0 - bad, 1 - normal) ; Multi-class classification (0 - DoS/DDoS, 1 - R2L, 2 - U2R, 3 - normal, 4 - probe).
 
 \subsubsection{Logistic Regression}
-Logistic Regression is a machine learning algorithm based on the regression model which is used to fit a model to describe the relationship between a dependent (categorical target) and one or more independent variables. Used mainly for classification purposes, the target variable in a logistic regression model is mainly binary, although the method can be used for multi-class classification too. The basis of logistic regression is a {\em logistic function} (usually a sigmoid function) which keeps the output values bounded between 0 and 1   \cite{islr09}.\\
-We train two logistic regression models - one for the 2-class classification and one for the multi-class classification. 
+Logistic Regression is a machine learning algorithm based on the regression model which is used to fit a model to describe the relationship between a dependent (categorical target) and one or more independent variables. Used mainly for classification purposes, the target variable in a logistic regression model is mainly binary, although the method can be used for multi-class classification too. The basis of logistic regression is a {\em logistic function} (usually a sigmoid function) which keeps the output values bounded between 0 and 1. This function is fit using a {\em maximum likelihood} methodology which attempts to estimate the coefficients of the regression equation such that the probability outputs match as closely as possible to the true output values \cite{islr09}.\\
+We train two logistic regression models - one for the 2-class classification and one for the multi-class classification. The model for the 2-class classification is fit as per the default parameters, with the regularization parameter as 0.01 for stronger regularization. For the multi-class classification (since this is not the default type for a logistic regression model), we use a specific solver method known as {\em Stochastic Average Gradient Descent Solver} \cite{scikit12}.
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/logreg2.PNG}
 	\caption{Logistic Regression Confusion Matrix - 2-class classification}
@@ -127,8 +127,9 @@ The overall accuracy, recall, precision and F1 score for the 2-class classificat
 52.3. We can observe that the accuracy of the model seems to be good for the 2-class classification but the recall and F1 scores decrease for the multi-class classification (due to the decrease in recall for the U2R and R2L classes, which have a higher proportion in test as compared to train data).
 
 \subsubsection{K-Nearest Neighbors}
-The K-Nearest Neighbors algorithm selects the {\em k} nearest points to the test data point, present in the training data point, and assign it the class label depending on the majority class label present among the {\em k} training data points \cite{islr09}.\\
-We train two KNN (k=5) models - one for the 2-class classification and one for the multi-class classification. 
+The K-Nearest Neighbors algorithm selects the {\em k} nearest points to the test data point (depending upon a predefined distance metric), present in the training data point, and assign it the class label depending on the majority class label present among the {\em k} training data points. Being a non-parametric method, KNN does not assume any initial distribution or form of data \cite{islr09}.\\
+We train two KNN (k=5) models - one for the 2-class classification and one for the multi-class classification. For both the classification models, instead of taking the {\em brute force} or traditional approach, we use an optimized approach known as {\em Ball Tree Method} \cite{scikit12}, which is a tree based method that endeavors to reduce the number of distance computations by encoding the distance information more efficiently. It recursively divides the data according to a hyper-sphere determined by a particular centroid and radius, and reduces the participants for a neighbor search using triangle inequality \cite{scikit12}. This method works better for data in high dimensions (similar to the dataset for our analysis). Also, we take the distance metric as Manhattan Distance instead of the commonly used Euclidean Distance metric, due to better properties of Manhattan distance in higher dimensions.
+
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/knn2.PNG}
 	\caption{KNN Confusion Matrix - 2-class classification}
@@ -145,8 +146,8 @@ The overall accuracy, recall, precision and F1 score for the 2-class classificat
 and 55.17. We can observe that the accuracy of the model increases as compared to a simple logistic regression model for the 2-class classification. The recall and F1 scores too increase for the multi-class classification case.
 
 \subsubsection{Support Vector Machine - Linear}
-A Support Vector Machine is a model based on the maximal margin classifier i.e. classification based on an optimal separating hyperplane. The support vector machine extends this concept further and to non-linear decision boundaries as well \cite{islr09}.\\
-We train two linear SVM models - one for the 2-class classification and one for the multi-class classification. 
+A Support Vector Machine is a model based on the maximal margin classifier i.e. classification based on an optimal separating hyperplane. The support vector machine extends this concept further and to non-linear decision boundaries as well. It uses a function referred to as the {\em kernel} which acts as quantification of the similarity between observations. Therefore, for non-linear cases a variety of kernels such as radial or polynomial can be employed for classification purposes \cite{islr09}.\\
+We train two linear SVM models - one for the 2-class classification and one for the multi-class classification. We implement this classifier using a {\em Bagging Classifier} which uses the base SVM classifier on different subsets of data drawn with replacement (also referred to as bootstrapping) and aggregates the results to given the final output \cite{scikit12}. 
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/svm2.PNG}
 	\caption{Linear SVM Confusion Matrix - 2-class classification}
@@ -162,7 +163,7 @@ Figure \ref{F:linsvmall} shows the multi-class confusion matrix for linear SVM.\
 The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.24, 94.55, 85.80 and 89.06 percent. The same for the multi-class classification are as follows: 89.29, 53.96, 81.97 and 54.22. We can observe that the accuracy of the model increases as compared to a simple logistic regression model but is lower than the KNN model for the 2-class classification. The recall and F1 scores too increase compared to logistic regression but are lower than KNN for the multi-class classification case.
 
 \subsubsection{Support Vector Machine - Polynomial}
-Here, we train two SVM models (with polynomial kernels of degree=3) - one for the 2-class classification and one for the multi-class classification. 
+Here, we train two SVM models (with polynomial kernels of degree=3) and using a {\em Bagging Classifier} - one for the 2-class classification and one for the multi-class classification. 
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/svmpoly2.PNG}
 	\caption{Polynomial SVM Confusion Matrix - 2-class classification}
@@ -179,8 +180,8 @@ The overall accuracy, recall, precision and F1 score for the 2-class classificat
 and 56.42. We can observe that the accuracy of this model too is lower than the KNN model for the 2-class classification. However, the recall and F1 scores are higher than KNN too (correctly classifies more DoS/DDoS and probe attacks than linear SVM and more R2L and probe attacks than KNN) for the multi-class classification case. Overall, the performance is similar to KNN.
 
 \subsubsection{Random Forest}
-A random forest model works as an improvement over individual decision trees through building a number of decision trees on bootstrapped samples along with decorrelating the individual trees by choosing only a random subset of predictors out of the total predictors while constructing trees. At each split, a fresh subset of predictors is used \cite{islr09}.\\
-We train two random forest models - one for the 2-class classification and one for the multi-class classification. 
+A random forest model works as an improvement over individual decision trees through building a number of decision trees on bootstrapped samples along with decorrelating the individual trees by choosing only a random subset of predictors out of the total predictors while constructing trees. At each split, a fresh subset of predictors is used which implements the decorrelation of features \cite{islr09}.\\
+We train two random forest models - one for the 2-class classification and one for the multi-class classification. The selection of the subset of features is taken as the default parameter i.e. square root of the total number of features \cite{scikit12}.
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/rf2.PNG}
 	\caption{Random Forest Confusion Matrix - 2-class classification}
@@ -215,7 +216,7 @@ The overall accuracy, recall, precision and F1 score for the 2-class classificat
 and 53.90. We can observe that the accuracy of this model is similar to that of a random forest model for the 2-class classification. The recall and F1 score for multi-class classification is comparable to the random forest and linear SVM model.
 
 \subsubsection{Ensemble Modeling}
-Ensemble modeling deals with the combination of two or more machine learning models to generate a model with better accuracy. We have already observed that Random Forests have the highest accuracy for the 2-label classification whereas a polynomial SVM has better recall for the multi-label classification. Therefore, we try to get the best of both worlds by creating an ensemble of two Random Forest (with different rules for selection of the feature subset) and one polynomial SVM model.\\
+Ensemble modeling deals with the combination of two or more machine learning models to generate a model with better accuracy. We have already observed that Random Forests have the highest accuracy for the 2-label classification whereas a polynomial SVM has better recall for the multi-label classification. Therefore, we try to get the best of both worlds by creating an ensemble of two Random Forest (with different rules for selection of the feature subset - square root of features and log of features) and one polynomial SVM model.\\
 We train two ensemble models - one for the 2-class classification and one for the multi-class classification. 
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/ensemble2.PNG}
@@ -233,7 +234,7 @@ The overall accuracy, recall, precision and F1 score for the 2-class classificat
 and 54.46. We can observe that the accuracy and F1 score of this model is  higher than all individual models for the 2-class classification. The recall and F1 score for multi-class classification is balanced between that of the random forest and the polynomial SVM but is higher than most individual models.
 
 \subsubsection{Unsupervised Learning - Clustering}
-Up till here, we observed and evaluated a variety of supervised learning models. As a result, we came to the conclusion that an ensemble of two good models often results in a better and more balanced result than individual models. In this section, we will examine how exploring the test data by means of a clustering algorithm (with no support from the training data) helps provide a good idea of the patterns within the data.\\
+Up till here, we observed and evaluated a variety of supervised learning models. As a result, we came to the conclusion that an ensemble of two good models often results in a better and more balanced result than individual models. In this section, we will examine how exploring the test data by means of a clustering algorithm (with no support from the training data) helps provide a good idea of the patterns within the data. The clustering algorithm we will use for this purpose is K-Means which is used to partition data into a given number of non-overlapping clusters based on a distance metric \cite{islr09}.\\
 We train two k-means clustering models for both 2-class and multi-class classification - one for clusters=5 and the other for clusters=10 (for greater granularity). \\
 \begin{figure}
 	\includegraphics[width=1.0\columnwidth]{images/cluster52graph.PNG}
@@ -277,11 +278,10 @@ We can install PySpark on a Windows machine using GOW (incorporates Linux comman
 	\label{F:ps}
 \end{figure}
 Figure \ref{F:ps} shows the command prompt when we launch PySpark locally.\\
-We have not used Spark for our analyses further as Python was able to handle the 10 percent datasets locally. However, PySpark can prove to be a great tool for analyzing data and creating models for larger datasets using a familiar and flexible language like Python.
+We have not used Spark for our analyses further as Python was able to handle the 10 percent datasets locally. However, PySpark can prove to be a great tool for analyzing data and creating models for larger datasets using a familiar and flexible language like Python. The presence of libraries like {\em mllib} in PySpark can offer us a wide variety of learning algorithms (similar to the {\em sklearn} library in Python).
 
 \section{Conclusion}
-The detection and prevention of DDoS attacks is a crucial problem for the safety and stability of networks. With the increasing use and dependence on technology and connectivity, this affects a huge cohort of people today. The data generated from day-to-day network traffic is huge and largely unstructured, but it can be captured and modified into an understandable structure, to be analyzed and used to generate efficient solutions. Through our analysis, we affirm the efficiency of machine learning technologies as tools for Big Data analytics and the use of open-source distributed processing systems as supports towards utilization of these tools. Therefore, Big Data technologies along with intelligent analytic solutions can help create new and improve existing defense systems to ensure security from such malicious attacks and intrusions. 
-
+The detection and prevention of DDoS attacks is a crucial problem for the safety and stability of networks. With the increasing use and dependence on technology and connectivity, this affects a huge cohort of people today. The data generated from day-to-day network traffic is huge and largely unstructured, but it can be captured and modified into an understandable structure, to be analyzed and used to generate efficient solutions. Through our analysis, we affirm the efficiency of machine learning technologies as tools for Big Data analytics and the use of open-source distributed processing systems as supports towards utilization of these tools. We observe that not only do supervised learning methods work well towards this objective, but unsupervised learning techniques such as clustering also provide us with helpful insights on pattern detection in the data. Therefore, Big Data technologies along with intelligent analytic solutions can help create new and improve existing defense systems to ensure security from such malicious attacks and intrusions.
 
 
 \bibliographystyle{ACM-Reference-Format}
