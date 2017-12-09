@@ -272,12 +272,6 @@ When we venture into unsupervised learning we observe that clustering algorithms
 The volume of network traffic data generated is generally quite huge, and thus requires Big Data technologies to deal with it. Our demonstration was for a smaller subset of the actual dataset (which in itself consists of five million records). However, this larger dataset too consists of logs only for seven weeks of monitoring. We can therefore imagine how voluminous the datasets would begin to get with constant monitoring of systems. In such cases, Big Data cloud technologies can come to the aid of analytics, and help create a sustainable system for such intrusion detection purposes.\\
 Our analysis was carried out using Python on an individual system. But often for larger datasets, we need additional resources. The PySpark API, from Apache Spark (an open-source processing engine), can help us  gain ``access to the extremely high-performance data processing enabled by Spark's Scala architecture - without the need to learn any Scala'' \cite{pysp11}. The smallest building blocks of Spark are referred to as RDDs (Resilient Distributed Datasets) and these along with Spark's DataFrame can act as useful alternatives to the {\em Pandas} data frames, in case of large datasets, where the distributed processing power of Spark can come into play \cite{pysp11}.\\
 We can install PySpark on a Windows machine using GOW (incorporates Linux commands in Windows like gzip, curl and tar) and Anaconda (an open-scale distribution containing Jupyter Notebook and other resources for Python). The package can be installed from the Apache Spark website, following which we perform {\em gzip} and {\em tar} operations on it. After adding the windows binary for Hadoop and modifying a few environment variables, you can launch Spark locally from Command Prompt. 
-\begin{figure}
-	\includegraphics[width=1.0\columnwidth]{images/pyspark.PNG}
-	\caption{Launching PySpark}
-	\label{F:ps}
-\end{figure}
-Figure \ref{F:ps} shows the command prompt when we launch PySpark locally.\\
 We have not used Spark for our analyses further as Python was able to handle the 10 percent datasets locally. However, PySpark can prove to be a great tool for analyzing data and creating models for larger datasets using a familiar and flexible language like Python. The presence of libraries like {\em mllib} in PySpark can offer us a wide variety of learning algorithms (similar to the {\em sklearn} library in Python).
 
 \section{Conclusion}
