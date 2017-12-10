@@ -160,7 +160,7 @@ Figure \ref{F:linsvm2} shows the 2-class confusion matrix for linear SVM.
 	\label{F:linsvmall}
 \end{figure}
 Figure \ref{F:linsvmall} shows the multi-class confusion matrix for linear SVM.\\
-The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.24, 94.55, 85.80 and 89.06 percent. The same for the multi-class classification are as follows: 89.29, 53.96, 81.97 and 54.22. We can observe that the accuracy of the model increases as compared to a simple logistic regression model but is lower than the KNN model for the 2-class classification. The recall and F1 scores too increase compared to logistic regression but are lower than KNN for the multi-class classification case.
+The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.23, 94.55, 85.78 and 89.04 percent. The same for the multi-class classification are as follows: 89.14, 54.91, 83.44 and 55.81. We can observe that the accuracy of the model increases as compared to a simple logistic regression model but is lower than the KNN model for the 2-class classification. The recall and F1 scores too increase compared to logistic regression but are similar to that of KNN for the multi-class classification case.
 
 \subsubsection{Support Vector Machine - Polynomial}
 Here, we train two SVM models (with polynomial kernels of degree=3) and using a {\em Bagging Classifier} - one for the 2-class classification and one for the multi-class classification. 
@@ -176,8 +176,8 @@ Figure \ref{F:polysvm2} shows the 2-class confusion matrix for polynomial SVM.
 	\label{F:polysvmall}
 \end{figure}
 Figure \ref{F:polysvmall} shows the multi-class confusion matrix for polynomial SVM.\\
-The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.26, 94.39, 85.84 and 89.05 percent. The same for the multi-class classification are as follows: 91.96, 56.49, 86.28
-and 56.42. We can observe that the accuracy of this model too is lower than the KNN model for the 2-class classification. However, the recall and F1 scores are higher than KNN too (correctly classifies more DoS/DDoS and probe attacks than linear SVM and more R2L and probe attacks than KNN) for the multi-class classification case. Overall, the performance is similar to KNN.
+The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.28, 94.41, 85.87 and 89.08 percent. The same for the multi-class classification are as follows: 91.95, 56.74, 84.60
+and 56.38. We can observe that the accuracy of this model too is lower than the KNN model for the 2-class classification. However, the recall and F1 scores are higher than KNN too (correctly classifies more DoS/DDoS and probe attacks than linear SVM and more R2L and probe attacks than KNN) for the multi-class classification case. Overall, the performance is similar to KNN.
 
 \subsubsection{Random Forest}
 A random forest model works as an improvement over individual decision trees through building a number of decision trees on bootstrapped samples along with decorrelating the individual trees by choosing only a random subset of predictors out of the total predictors while constructing trees. At each split, a fresh subset of predictors is used which implements the decorrelation of features \cite{islr09}.\\
@@ -213,7 +213,7 @@ Figure \ref{F:rf2} shows the 2-class confusion matrix for a Multi-Layer Perceptr
 \end{figure}
 Figure \ref{F:nnall} shows the multi-class confusion matrix for a Multi-Layer Perceptron.\\
 The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.40, 94.68, 86.02 and 89.27 percent. The same for the multi-class classification are as follows: 91.98, 54.18, 77.53
-and 53.90. We can observe that the accuracy of this model is similar to that of a random forest model for the 2-class classification. The recall and F1 score for multi-class classification is comparable to the random forest and linear SVM model.
+and 53.90. We can observe that the accuracy of this model is similar to that of a random forest model for the 2-class classification. The recall and F1 score for multi-class classification is comparable to the random forest model.
 
 \subsubsection{Ensemble Modeling}
 Ensemble modeling deals with the combination of two or more machine learning models to generate a model with better accuracy. We have already observed that Random Forests have the highest accuracy for the 2-label classification whereas a polynomial SVM has better recall for the multi-label classification. Therefore, we try to get the best of both worlds by creating an ensemble of two Random Forest (with different rules for selection of the feature subset - square root of features and log of features) and one polynomial SVM model.\\
@@ -230,8 +230,8 @@ Figure \ref{F:en2} shows the 2-class confusion matrix for an ensemble model.
 	\label{F:enall}
 \end{figure}
 Figure \ref{F:enall} shows the multi-class confusion matrix for an ensemble model.\\
-The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.69, 95.27, 86.37 and 89.69 percent. The same for the multi-class classification are as follows: 92.16, 55.31, 85.00
-and 54.46. We can observe that the accuracy and F1 score of this model is  higher than all individual models for the 2-class classification. The recall and F1 score for multi-class classification is balanced between that of the random forest and the polynomial SVM but is higher than most individual models.
+The overall accuracy, recall, precision and F1 score for the 2-class classification are as follows: 92.66, 95.25, 86.33 and 89.65 percent. The same for the multi-class classification are as follows: 92.26, 56.85, 84.77
+and 55.41. We can observe that the accuracy and F1 score of this model is  higher than all individual models for the 2-class classification. The recall and F1 score for multi-class classification is balanced between that of the random forest and the polynomial SVM but is higher than most individual models.
 
 \subsubsection{Unsupervised Learning - Clustering}
 Up till here, we observed and evaluated a variety of supervised learning models. As a result, we came to the conclusion that an ensemble of two good models often results in a better and more balanced result than individual models. In this section, we will examine how exploring the test data by means of a clustering algorithm (with no support from the training data) helps provide a good idea of the patterns within the data. The clustering algorithm we will use for this purpose is K-Means which is used to partition data into a given number of non-overlapping clusters based on a distance metric \cite{islr09}.\\
