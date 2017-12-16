@@ -24,7 +24,6 @@ paper1:
         - 224
     status: Nov 3 17 100%
     title: Big Data Applications in the Hospitality Sector
-    type: latex
     url: https://github.com/bigdata-i523/hid224/blob/master/paper1/report.tex
 paper2:
     review: Nov 6 2017
@@ -49,7 +48,6 @@ paper2:
         - 224
     status: Nov 6 17 100%
     title: Big Data Applications in the Energy and Utilities Sector
-    type: latex
     url: https://github.com/bigdata-i523/hid224/blob/master/paper2/report.tex
 project:
     abstract: >
